@@ -1,0 +1,30 @@
+<mat-toolbar>Registro de Pago</mat-toolbar>
+<div class="example-container">
+
+  <mat-form-field>
+    <mat-select placeholder="Reserva" [(value)]="idReservaSeleccionada">
+      <mat-option *ngFor="let r of reservas" [value]="r.id">{{r.cliente.dni}} | {{r.fechaEntrada}} | {{r.fechaSalida}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Escoge una fecha de Pago"
+      [(ngModel)]="fechaPagoSeleccionada">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Monto" [(ngModel)]="monto">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="IGV" [(ngModel)]="igv">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Forma de Pago" [(ngModel)]="bFormaPago" type = "boolean">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="pagar()" [disabled]="estadoBotonPagar()">Pagar</button>
+  <br>
+  <button mat-raised-button color="primary" (click)="limpiarControles()">Cancelar</button>
+</div>

@@ -1,5 +1,5 @@
 # Habitacion Controller
-´´´java
+```java
 package com.example.controller;
 
 import java.net.URI;
@@ -86,4 +86,4 @@ public class HabitacionController {
 	}
 
 }
-´´´
+```

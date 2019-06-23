@@ -3,7 +3,7 @@
 
   <mat-form-field>
     <mat-select placeholder="Reserva" [(value)]="idReservaSeleccionada">
-      <mat-option *ngFor="let r of reservas" [value]="r.id">{{r.cliente.dni}} | {{r.fechaEntrada}} | {{r.fechaSalida}}</mat-option>
+      <mat-option *ngFor="let r of reservas" [value]="r.id">{{r.cliente.nombres}} {{r.cliente.apellidos}} | {{r.cliente.dni}} | Llegada: {{r.fechaEntrada}} | Salida: {{r.fechaSalida}}</mat-option>
     </mat-select>
   </mat-form-field>
 

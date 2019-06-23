@@ -1,0 +1,51 @@
+<mat-toolbar>Registro de Reserva</mat-toolbar>
+<div class="example-container">
+
+  <mat-form-field>
+    <mat-select placeholder="Cliente" [(value)]="idClienteSeleccionado">
+      <mat-option *ngFor="let c of clientes" [value]="c.id">{{c.nombres}} {{c.apellidos}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Escoge una fecha de Llegada"
+      [(ngModel)]="fechaEntradaSeleccionada">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker1" placeholder="Escoge una fecha de Salida"
+      [(ngModel)]="fechaSalidaSeleccionada">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker2" placeholder="Escoge una fecha de Confirmacion"
+      [(ngModel)]="fechaConfirmacionSeleccionada">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="Habitacion" [(value)]="idHabitacionSeleccionada">
+      <mat-option *ngFor="let hs of habitaciones" [value]="hs.id">
+        {{ hs.descripcion }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="agregarHabitacion()">Agregar Habitacion</button>
+
+  <mat-toolbar *ngFor="let d of habitacionesSeleccionadas; let i=index">
+    {{d.descripcion}}
+    <span class="example-spacer"></span>
+
+  </mat-toolbar>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()" [disabled]="estadoBotonRegistrar()">Registrar</button>
+  <br>
+  <button mat-raised-button color="primary" (click)="limpiarControles()">Cancelar</button>
+</div>

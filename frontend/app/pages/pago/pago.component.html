@@ -1,0 +1,40 @@
+<mat-toolbar>Pagos</mat-toolbar>
+
+<div class="example-container mat-elevation-z8">
+
+  <router-outlet></router-outlet>
+
+  <div class="example-header">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Buscar pago">
+    </mat-form-field>
+  </div>
+
+  <mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="idPago">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="fechaPago">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> fechaPago </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.fechaPago}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="monto">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Monto </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.monto}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="igv">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> IGV </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.igv}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+
+    </mat-row>
+  </mat-table>
+  <button mat-button color="primary" routerLink="/cliente">Aceptar</button>
+</div>

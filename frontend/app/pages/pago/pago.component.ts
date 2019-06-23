@@ -13,7 +13,7 @@ export class PagoComponent implements OnInit {
 
   id: number;
   dataSource: MatTableDataSource<Pago>;
-  displayedColumns = ['idPago', 'fechaPago', 'monto', 'igv'];
+  displayedColumns = ['idPago', 'Cliente', 'fechaPago', 'monto', 'igv'];
 
   constructor(private route: ActivatedRoute, private pagoService: PagoService,  private snackBar: MatSnackBar) { }
 
@@ -41,5 +41,4 @@ export class PagoComponent implements OnInit {
     filterValue = filterValue.toLowerCase();
     this.dataSource.filter = filterValue;
   }
-
 }

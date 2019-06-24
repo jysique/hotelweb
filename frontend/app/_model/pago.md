@@ -1,3 +1,5 @@
+
+```java
 import { Reserva } from './reserva';
 
 export class Pago {
@@ -8,3 +10,4 @@ export class Pago {
     IGV: number;
     reserva: Reserva;
 }
+```

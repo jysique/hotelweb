@@ -1,3 +1,4 @@
+```java
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HOST } from '../_shared/var.constant';
@@ -41,3 +42,4 @@ export class ReservaService {
     return this.http.get<Reserva[]>(`${this.url}/listar/${id}`);
   }
 }
+```

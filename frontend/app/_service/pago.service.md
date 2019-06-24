@@ -1,3 +1,4 @@
+```java
 import { Injectable } from '@angular/core';
 import { HOST } from '../_shared/var.constant';
 import { Subject } from 'rxjs';
@@ -40,3 +41,4 @@ export class PagoService {
     return this.http.get<Pago[]>(`${this.url}/listar/${id}`);
   }
 }
+```

@@ -1,6 +1,6 @@
 
 ```java
-import { Cliente } from './cliente';
+import {Cliente} from './cliente';
 
 export class Reserva {
     public id: number;

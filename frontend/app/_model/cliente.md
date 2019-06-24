@@ -1,3 +1,5 @@
+```java
+
 export class Cliente {
     id: number;
     nombres: string;
@@ -5,3 +7,4 @@ export class Cliente {
     dni: number;
     telefono: string;
 }
+```

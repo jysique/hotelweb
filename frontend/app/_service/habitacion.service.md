@@ -1,3 +1,4 @@
+```java
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Habitacion } from '../_model/habitacion';
@@ -36,3 +37,4 @@ export class HabitacionService {
     return this.http.delete(`${this.url}/${id}`);
   }
 }
+```

@@ -1,3 +1,5 @@
+
+```java
 import { Cliente } from './cliente';
 
 export class Reserva {
@@ -7,3 +9,4 @@ export class Reserva {
     public fechaConfirmacion: string;
     public cliente: Cliente;
 }
+```

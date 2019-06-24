@@ -1,3 +1,4 @@
+```java
 export class Habitacion {
     public id: number;
     public tipo: string;
@@ -5,3 +6,4 @@ export class Habitacion {
     public descripcion: string;
     public ocupado: boolean;
 }
+```

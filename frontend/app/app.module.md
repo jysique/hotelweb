@@ -1,3 +1,4 @@
+```java
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -41,3 +42,4 @@ import { PagoEdicionComponent } from './pages/pago/pago-edicion/pago-edicion.com
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+```

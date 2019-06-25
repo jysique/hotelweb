@@ -1,3 +1,4 @@
+```java
 import { Component, OnInit } from '@angular/core';
 import { Pago } from 'src/app/_model/pago';
 import { MatTableDataSource, MatSnackBar } from '@angular/material';
@@ -42,3 +43,4 @@ export class PagoComponent implements OnInit {
     this.dataSource.filter = filterValue;
   }
 }
+```

@@ -1,3 +1,4 @@
+```java
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HabitacionComponent } from './pages/habitacion/habitacion.component';
@@ -30,3 +31,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+```

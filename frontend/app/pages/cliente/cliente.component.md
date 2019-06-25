@@ -1,3 +1,4 @@
+```java
 import { Component, OnInit } from '@angular/core';
 import { ClienteService } from 'src/app/_service/cliente.service';
 import { Cliente } from 'src/app/_model/cliente';
@@ -36,3 +37,4 @@ export class ClienteComponent implements OnInit {
     this.dataSource.filter = filterValue;
   }
 }
+```

@@ -1,3 +1,4 @@
+```java
 import { Component, OnInit } from '@angular/core';
 import { Reserva } from 'src/app/_model/reserva';
 import { ReservaService } from 'src/app/_service/reserva.service';
@@ -80,3 +81,4 @@ export class PagoEdicionComponent implements OnInit {
     return (this.monto == null || this.igv == null || this.idReservaSeleccionada === 0);
   }
 }
+```
